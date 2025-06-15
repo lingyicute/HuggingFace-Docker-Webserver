@@ -11,7 +11,7 @@ RUN apt-get update \
     && apt-get clean \
     && curl --proto '=https' --tlsv1.2 -sSfL https://get.static-web-server.net | sh \
     && chown -R lingyicute:lingyicute /home/lingyicute \
-    && chmod 755 /home/lingyicute \
+    && chmod 755 /home/lingyicute
 
 USER lingyicute
 WORKDIR /home/lingyicute
