@@ -15,6 +15,6 @@ RUN apt-get update \
 
 USER lingyicute
 WORKDIR /home/lingyicute
-RUN git clone https://github.com/lingyicute/Me && rm -rf ./Me/.git
+RUN git clone https://github.com/lingyicute/Me && rm -rf ./Me/.git && wget https://raw.githubusercontent.com/lingyicute/HuggingFace-Docker-Webserver/main/start.sh
 HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1
-ENTRYPOINT ["/usr/local/bin/static-web-server", "--port", "7860", "--root", "/home/lingyicute/Me"]
+ENTRYPOINT ["/home/lingyicute/start.sh"]
