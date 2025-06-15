@@ -16,5 +16,5 @@ RUN apt-get update \
 USER lingyicute
 WORKDIR /home/lingyicute
 RUN git clone https://github.com/lingyicute/Me && rm -rf ./Me/.git
-
+HEALTHCHECK CMD ["true"]
 ENTRYPOINT ["/usr/local/bin/static-web-server", "--port", "7860", "--root", "/home/lingyicute/Me"]
