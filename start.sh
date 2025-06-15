@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # 服务器配置
 SERVER_BIN="/usr/local/bin/static-web-server"
